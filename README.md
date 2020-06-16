@@ -3,7 +3,7 @@
 *Find torrent downloads via ip address*
 
 <p align="center">
-  <img src="https://i.ibb.co/DbgN7tv/torrent-seeker.png">
+  <img src="https://i.ibb.co/pb68HwX/Torrent-Seeker.png">
 </p>
 
 :gift: ___Installation on Linux:___
