@@ -1,9 +1,8 @@
 #!coding: UTF-8
 # Import modules
-# Import modules
 from requests import get
 from bs4 import BeautifulSoup
-from colorama import Fore
+from colorama import Fore, init
 from prettytable import PrettyTable
 import urllib, json, os
 init(convert=True)
@@ -28,18 +27,20 @@ print(rf"""{Fore.LIGHTGREEN_EX}
 
 # Get user input
 init(convert=True)
-ip = input('TorыыrentSeeker@target_ip: ' )
+ip = input('TorrentSeeker@target_ip: ' )
 
 
 #IP Info
 url = "https://ipinfo.io/" + ip + "/json"
-info = urllib.request.urlopen( url )
+info = urllib.request.urlopen(url)
 ls = json.load(info)
-print( "City -> ", ls["city"])
-print("Region -> ",ls["region"])
-print( "Location -> ", ls["loc"] )
-print( "Operator -> ", ls["org"])
-print("\n")
+res  = rf'''{Fore.LIGHTGREEN_EX}
+Ciry -> {ls['city']}
+Region -> {ls["region"]}
+Location -> {ls["loc"]}
+Operator -> {ls["org"]}
+'''
+print(res)
 
 # Get request
 page = get("https://iknowwhatyoudownload.com/en/peer/?ip=" + ip,
