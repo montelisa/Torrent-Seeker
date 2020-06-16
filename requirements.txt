@@ -2,3 +2,4 @@ colorama
 requests
 prettytable
 beautifulsoup4
+urllib
